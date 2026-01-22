@@ -37,10 +37,10 @@ const Marquee = () => {
             >
                 {[...Array(6)].map((_, i) => (
                     <span key={i} style={{
-                        fontSize: '2rem',
+                        fontSize: 'clamp(1.5rem, 4vw, 2rem)',
                         fontFamily: "'Anton', sans-serif",
                         textTransform: 'uppercase',
-                        marginRight: '60px',
+                        marginRight: 'clamp(30px, 8vw, 60px)',
                         letterSpacing: '0.1em'
                     }}>
                         Look Good • <span className="text-neon">Spend Less</span> • Get It Fast • S & S Wear •

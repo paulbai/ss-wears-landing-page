@@ -3,17 +3,17 @@ import { motion } from 'framer-motion';
 
 const FeatureInteractive = () => {
     return (
-        <section className="container" style={{ padding: '100px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <section className="container" style={{ padding: 'clamp(50px, 10vw, 100px) clamp(16px, 4vw, 24px)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-            <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                <h2 style={{ fontSize: '3rem', color: '#3A4A38', lineHeight: 1 }}>Online Convenience <span style={{ fontSize: '4rem', color: 'white' }}>✦</span></h2>
-                <h2 style={{ fontSize: '4rem', color: '#3A4A38', opacity: 0.5 }}>OFFLINE TRUST!</h2>
-                <p style={{ marginTop: '20px', maxWidth: '400px', margin: '20px auto', fontFamily: "'Inter', sans-serif" }}>
+            <div style={{ textAlign: 'center', marginBottom: 'clamp(30px, 6vw, 60px)' }}>
+                <h2 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', color: '#3A4A38', lineHeight: 1 }}>Online Convenience <span style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', color: 'white' }}>✦</span></h2>
+                <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', color: '#3A4A38', opacity: 0.5 }}>OFFLINE TRUST!</h2>
+                <p style={{ marginTop: 'clamp(16px, 3vw, 20px)', maxWidth: '400px', margin: 'clamp(16px, 3vw, 20px) auto', fontFamily: "'Inter', sans-serif", fontSize: 'clamp(0.9rem, 2vw, 1rem)' }}>
                     <strong>S & S Wear</strong> solves all your online shopping fears. Verified store, real products, and friendly service.
                 </p>
             </div>
 
-            <div style={{ position: 'relative', width: '100%', maxWidth: '800px', minHeight: '600px', display: 'flex', justifyContent: 'center' }}>
+            <div style={{ position: 'relative', width: '100%', maxWidth: '800px', minHeight: 'clamp(400px, 80vw, 600px)', display: 'flex', justifyContent: 'center' }}>
 
                 {/* Hand/Product Placeholder */}
                 <div style={{
@@ -47,12 +47,13 @@ const FeatureInteractive = () => {
                             right: pin.right,
                             background: 'black',
                             color: '#DFFF00',
-                            padding: '8px 20px',
+                            padding: 'clamp(6px, 1.5vw, 8px) clamp(12px, 3vw, 20px)',
                             borderRadius: '50px',
                             fontFamily: "'Permanent Marker', cursive",
-                            fontSize: '0.9rem',
-                            boxShadow: '4px 4px 0 rgba(0,0,0,0.2)',
-                            zIndex: 20
+                            fontSize: 'clamp(0.7rem, 2vw, 0.9rem)',
+                            boxShadow: 'clamp(2px, 1vw, 4px) clamp(2px, 1vw, 4px) 0 rgba(0,0,0,0.2)',
+                            zIndex: 20,
+                            whiteSpace: 'nowrap'
                         }}
                     >
                         {pin.label}

@@ -43,33 +43,33 @@ const NewHero = () => {
             <nav className="container" style={{
                 position: 'absolute',
                 top: 0, left: 0, right: 0,
-                padding: '30px 24px',
+                padding: 'clamp(16px, 4vw, 30px) clamp(12px, 4vw, 24px)',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
                 zIndex: 100
             }}>
-                <div style={{ fontWeight: 800, fontSize: '1.5rem', letterSpacing: '-0.05em' }}>S&S WEAR</div>
-                <a href="https://chat.whatsapp.com/BjPilHDLa7q0Z4Ux0pNmGn" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: '0.9rem', padding: '8px 20px', textDecoration: 'none', color: 'inherit' }}>Order Now</a>
+                <div style={{ fontWeight: 800, fontSize: 'clamp(1.2rem, 4vw, 1.5rem)', letterSpacing: '-0.05em' }}>S&S WEAR</div>
+                <a href="https://chat.whatsapp.com/BjPilHDLa7q0Z4Ux0pNmGn" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: 'clamp(0.75rem, 2.5vw, 0.9rem)', padding: 'clamp(6px, 2vw, 8px) clamp(12px, 3vw, 20px)', textDecoration: 'none', color: 'inherit' }}>Order Now</a>
             </nav>
 
             {/* Main Content */}
-            <div className="container" style={{
+            <div className="container hero-grid" style={{
                 position: 'relative',
                 width: '100%',
                 flex: 1,
                 display: 'grid',
-                gridTemplateColumns: 'minmax(0, 1fr) auto minmax(0, 1fr)',
+                gridTemplateColumns: 'minmax(0, 1fr)',
                 alignItems: 'center',
-                gap: '40px',
+                gap: 'clamp(20px, 5vw, 40px)',
                 perspective: '1000px',
                 zIndex: 10
             }}>
 
                 {/* Massive Background Text - Left */}
-                <div style={{ textAlign: 'right' }}>
+                <div style={{ textAlign: 'center', display: 'none' }} className="hero-text-left">
                     <h1 style={{
-                        fontSize: 'clamp(4rem, 15vw, 12rem)',
+                        fontSize: 'clamp(3rem, 12vw, 12rem)',
                         lineHeight: 0.8,
                         color: 'var(--color-off-white)',
                         opacity: 0.8,
@@ -78,17 +78,27 @@ const NewHero = () => {
                         LOOK
                     </h1>
                 </div>
+                <style>{`
+                    @media (min-width: 768px) {
+                        .hero-text-left {
+                            display: block !important;
+                            text-align: right !important;
+                        }
+                    }
+                `}</style>
 
                 {/* Floating Product Image - Center */}
                 <motion.div style={{ y: y1, zIndex: 10, position: 'relative' }}>
                     {/* Wrapper for Card + Sticker - NO overflow hidden here to allow sticker to pop out */}
                     <div style={{
-                        width: 'clamp(280px, 35vw, 450px)',
-                        height: 'clamp(350px, 45vw, 550px)',
+                        width: 'clamp(250px, 80vw, 450px)',
+                        height: 'clamp(300px, 100vw, 550px)',
+                        maxWidth: '450px',
+                        margin: '0 auto',
                         position: 'relative',
                         transform: 'rotate(-3deg)',
-                        boxShadow: '20px 20px 0px rgba(0,0,0,0.15)', // Shadow moves to wrapper
-                        borderRadius: '4px', // border radius on wrapper too just in case shadow respects it
+                        boxShadow: 'clamp(10px, 3vw, 20px) clamp(10px, 3vw, 20px) 0px rgba(0,0,0,0.15)',
+                        borderRadius: '4px',
                     }}>
 
                         {/* Inner Card - Handles Image Masking & Border */}
@@ -123,15 +133,16 @@ const NewHero = () => {
                         {/* Sticker - Now OUTSIDE the overflow:hidden div */}
                         <div style={{
                             position: 'absolute',
-                            top: '-30px',
-                            right: '-30px',
-                            zIndex: 20, // Ensure it sits on top of the card border
+                            top: 'clamp(-20px, -4vw, -30px)',
+                            right: 'clamp(-20px, -4vw, -30px)',
+                            zIndex: 20,
                             background: 'var(--color-black)',
                             color: 'white',
-                            padding: '12px 20px',
+                            padding: 'clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px)',
                             fontFamily: "'Permanent Marker', cursive",
+                            fontSize: 'clamp(0.75rem, 2.5vw, 1rem)',
                             transform: 'rotate(15deg)',
-                            boxShadow: '4px 4px 0 var(--color-neon)'
+                            boxShadow: 'clamp(2px, 1vw, 4px) clamp(2px, 1vw, 4px) 0 var(--color-neon)'
                         }}>
                             Available Now!
                         </div>
@@ -140,9 +151,9 @@ const NewHero = () => {
                 </motion.div>
 
                 {/* Massive Background Text - Right */}
-                <div style={{ textAlign: 'left' }}>
+                <div style={{ textAlign: 'center', display: 'none' }} className="hero-text-right">
                     <h1 style={{
-                        fontSize: 'clamp(4rem, 15vw, 12rem)',
+                        fontSize: 'clamp(3rem, 12vw, 12rem)',
                         lineHeight: 0.8,
                         color: 'var(--color-off-white)',
                         opacity: 0.8,
@@ -151,6 +162,14 @@ const NewHero = () => {
                         GOOD
                     </h1>
                 </div>
+                <style>{`
+                    @media (min-width: 768px) {
+                        .hero-text-right {
+                            display: block !important;
+                            text-align: left !important;
+                        }
+                    }
+                `}</style>
 
                 {/* Floating Elements (Parallax) - Absolute over the grid */}
                 <motion.div style={{ y: y2, position: 'absolute', left: '5%', bottom: '20%', zIndex: 20, maxWidth: '200px' }}>
@@ -217,6 +236,20 @@ const NewHero = () => {
                     ))}
                 </div>
             </div>
+
+            {/* Responsive CSS */}
+            <style>{`
+                @media (min-width: 768px) {
+                    .hero-grid {
+                        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+                    }
+                }
+                @media (max-width: 767px) {
+                    .floating-badge-left, .floating-badge-right {
+                        display: none !important;
+                    }
+                }
+            `}</style>
         </section>
     );
 };

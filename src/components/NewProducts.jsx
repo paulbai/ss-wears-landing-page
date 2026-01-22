@@ -84,13 +84,21 @@ const NewProducts = () => {
     ];
 
     return (
-        <section className="container" style={{ padding: '100px 24px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '60px' }}>
-                <h2 style={{ fontSize: '3rem', color: 'white' }}>One Store. Everything.</h2>
-                <button className="btn-secondary" style={{ backgroundColor: '#8A9A88', color: 'white', borderColor: 'white' }}>Latest Drops ⇅</button>
+        <section className="container" style={{ padding: 'clamp(50px, 10vw, 100px) clamp(16px, 4vw, 24px)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 'clamp(30px, 6vw, 60px)' }} className="products-header">
+                <h2 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', color: 'white', margin: 0 }}>One Store. Everything.</h2>
+                <button className="btn-secondary" style={{ backgroundColor: '#8A9A88', color: 'white', borderColor: 'white', fontSize: 'clamp(0.75rem, 2vw, 0.9rem)' }}>Latest Drops ⇅</button>
             </div>
+            <style>{`
+                @media (min-width: 640px) {
+                    .products-header {
+                        flex-direction: row !important;
+                        align-items: center !important;
+                    }
+                }
+            `}</style>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: 'clamp(20px, 4vw, 30px)' }}>
                 {categories.map((cat, i) => (
                     <motion.div
                         key={cat.id}
