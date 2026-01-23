@@ -8,7 +8,7 @@ const Footer = () => {
                 <h2 style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)', fontWeight: 800, marginBottom: 'clamp(16px, 3vw, 24px)' }}>S & S WEAR</h2>
 
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 'clamp(12px, 3vw, 24px)', flexWrap: 'wrap', marginBottom: 'clamp(30px, 6vw, 40px)', fontSize: 'clamp(0.85rem, 2vw, 1rem)' }} className="footer-contact">
-                    <span>No. 41 Regent Street, Freetown</span>
+                    <span>No. 41 Regent Road, Freetown</span>
                     <span>+232 99 772 097</span>
                     <span>+232 76 488 050</span>
                 </div>

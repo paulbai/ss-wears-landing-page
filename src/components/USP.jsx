@@ -21,7 +21,7 @@ const USP = () => {
         {
             icon: <MapPin size={32} color="var(--gold)" />,
             title: "Physical Store = Trust",
-            desc: "No. 41 Regent Street, Freetown"
+            desc: "No. 41 Regent Road, Freetown"
         }
     ];
 

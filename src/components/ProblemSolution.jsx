@@ -77,7 +77,7 @@ const ProblemSolution = () => {
                             "Trusted brand with proven track record",
                             "Real products, real photos, real quality",
                             "Fast reliable delivery within Freetown",
-                            "Walk-in store: No. 41 Regent Street"
+                            "Walk-in store: No. 41 Regent Road"
                         ].map((item, i) => (
                             <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px', fontSize: '1.05rem', fontWeight: 500 }}>
                                 <CheckCircle size={20} color="#51cf66" />

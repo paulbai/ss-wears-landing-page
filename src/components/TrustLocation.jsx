@@ -44,7 +44,7 @@ const TrustLocation = () => {
                                     rel="noopener noreferrer"
                                     style={{ opacity: 0.8, color: 'inherit', textDecoration: 'underline', cursor: 'pointer' }}
                                 >
-                                    No. 41 Regent Street, Freetown
+                                    No. 41 Regent Road, Freetown
                                 </a>
                             </div>
                         </div>
